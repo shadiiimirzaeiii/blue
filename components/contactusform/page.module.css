@@ -1,0 +1,42 @@
+/* ContactForm.module.css */
+.contactContainer {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.contactImage {
+    padding-right: 15px;
+    /* Adjust as needed */
+}
+
+.contactForm {
+    padding-left: 15px;
+    /* Adjust as needed */
+}
+
+.formTitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.inputField,
+.textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submitButton {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}

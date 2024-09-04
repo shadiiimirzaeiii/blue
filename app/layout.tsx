@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import LocalFont from "@next/font/local";
 // import LocalFont from "../libs/font";
 import 'bootstrap/dist/css/bootstrap.min.css';
 const inter = Inter({ subsets: ["latin"] });
@@ -10,9 +10,13 @@ export const metadata: Metadata = {
   description: "Blueline App !",
 };
 
-// const bluelinefont =LocalFont({
-//   src: "../libs/font"
-// })
+const bluelinefont = LocalFont({
+  src: '../public/fonts/Yekan-Bakh-Regular.ttf', 
+  display: 'swap', 
+});
+
+
+
 export default function RootLayout({
   children,
 }:{
@@ -20,8 +24,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* className={bluelinefont.className} */}
-      <body>{children}</body>
+      
+      <body className={bluelinefont.className}>{children}</body>
     </html>
   );
 }

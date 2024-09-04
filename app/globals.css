@@ -1,3 +1,16 @@
+
+@font-face {
+  font-family: 'Yekan Bakh';
+  src: url('../public/fonts/Yekan-Bakh-Regular.ttf') format('ttf') !important;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Yekan Bakh' !important;
+}
+
+
 :root {
   direction: rtl !important;
   --max-width: 1100px;

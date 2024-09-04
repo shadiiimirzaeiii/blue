@@ -4,6 +4,12 @@ import NavbarComponent from "../components/navbar/page";
 import style from "./page.module.css";
 import SearchBar from "../components/searchbar/page";
 import CategoryCard from "../components/categorycard/page";
+import AboutUs from "../public/aboutus.png";
+import { Row, Col, Container } from 'react-bootstrap';
+import ContactusForm from "../components/contactusform/page";
+import SelectWay from '../components/selectway/page';
+
+
 export default function Home() {
   const categories = [
     {
@@ -41,7 +47,7 @@ export default function Home() {
   ];
 
   return (
-    <div className={style["container-wrapper"]}>
+    <>
       <NavbarComponent />
 
       <div className={style["image-container"]}>
@@ -60,20 +66,56 @@ export default function Home() {
         </h4>
         <SearchBar />
       </div>
-      <h1 className={style["title-category"]}>دسته بندی تجهیزات</h1>
-      <h4 className={style["description-category"]}>
-        بلو لاین به عنوان یک کمپانی با سابقه درخشان، گستره وسیعی از خدمات
-        کاربردی و مفید را به مشتریان خود عرضه می کند.
-      </h4>
-      <div className={style["category-container"]}>
-        {categories.map((category, index) => (
-          <CategoryCard
-            key={index}
-            title={category.title}
-            description={category.description}
-          />
-        ))}
-      </div>
-    </div>
+      <Container>
+        <h1 className={style["title-category"]}>دسته بندی تجهیزات</h1>
+        <h4 className={style["description-category"]}>
+          بلو لاین به عنوان یک کمپانی با سابقه درخشان، گستره وسیعی از خدمات
+          کاربردی و مفید را به مشتریان خود عرضه می کند.
+        </h4>
+        <Row className={style["category-container"]}>
+          {categories.map((category, index) => (
+            <Col key={index} md={3} className="mb-4">
+              <CategoryCard
+                title={category.title}
+                description={category.description}
+              />
+            </Col>
+          ))}
+        </Row>
+        <Row>
+          <h1 className={style["title-category"]}>انتخاب با شماست</h1>
+          <h4 className={style["description-category"]}>
+            با توجه به نیاز خود وارد داشبورد مورد نظر شوید و از امکانات بلو لاین
+            بهره مند شوید.
+          </h4>
+          <SelectWay/>
+        </Row>
+        <Row className={style["title-aboutus"]}>
+          <h1> درباره ما </h1>
+          <Row className={style["aboutus-container"]}>
+            <Col md={6}>
+              <Image
+                src={AboutUs}
+                alt="aboutus"
+                layout="responsive"
+                className={style["aboutus-image"]}
+              />
+            </Col>
+            <Col md={6}>
+              <p className={style["aboutus-text"]}>
+                ما یک تیم متخصص و پویا هستیم که به ارائه خدمات اجاره تجهیزات با کیفیت
+                و قابل اعتماد، متعهد می باشیم. از مزایای اجاره تجهیزات از ما، ارائه
+                قیمت‌های رقابتی و شفاف است. با ارائه خدماتی مانند بیمه کامل، خدمات
+                پشتیبانی 24 ساعته و امکان تحویل تجهیز در محل مورد نظر شما، سعی می‌کنیم
+                تجربه اجاره تجهیزات را برای شما، بهبود دهیم......
+                <br/>
+                <a href="#">بیشتر بخوانید</a>
+              </p>
+            </Col>
+          </Row>
+        </Row>
+        <ContactusForm />
+      </Container>
+    </>
   );
 }
