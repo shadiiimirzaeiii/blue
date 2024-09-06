@@ -1,7 +1,5 @@
 "use client"; 
-
 import React from "react";
-import styles from "./page.module.css"; 
 import Card from "react-bootstrap/Card";
 import gps from "../../public/gps.png";
 import Image from "next/image";
@@ -13,13 +11,15 @@ interface CategoryCardProps {
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ title, description }) => {
   return (
-    <Card className={`col-3 ${styles["cardContainer"]}`}>
-      <div className={styles["imageContainer"]}>
-        <Image src={gps} alt="gps" width={56} height={56} />
+    <Card className="w-full h-[322px] flex flex-col items-center justify-between p-5 rounded-tl-lg bg-white shadow-md mb-4">
+      <div className="w-[56px] h-[56px] flex items-center justify-center mt-[3%]">
+        <Image src={gps} alt="GPS icon" width={56} height={56} />
       </div>
-      <Card.Body>
-        <Card.Title className={styles["cardTitle"]}>{title}</Card.Title>
-        <Card.Text className={styles["cardDescription"]}>
+      <Card.Body className="flex flex-col items-center">
+        <Card.Title className="w-[190px] text-2xl font-bold text-center mb-2">
+          {title}
+        </Card.Title>
+        <Card.Text className="w-[180px] text-base font-normal text-center text-[#575757] p-2 rounded-md">
           {description}
         </Card.Text>
       </Card.Body>
