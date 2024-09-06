@@ -11,6 +11,7 @@ import Button from "react-bootstrap/Button";
 function NavbarComponent() {
   return (
     <Navbar bg="light" data-bs-theme="light" className={style["navbar-dir"]}>
+      <p className="text-3xl font-bold underline mt-6">test</p>
       <Container>
         <Navbar.Brand href="#home">
           <Image
