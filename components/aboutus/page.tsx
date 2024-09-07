@@ -7,7 +7,15 @@ function AboutUs() {
   return (
     <>
             <div className="text-center text-black text-2xl font-bold mt-12 w-[1160px]">
-          <h1> درباره ما </h1>
+                             <div className="flex justify-center">
+            <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
+              <h1 className="text-center text-black text-2xl font-bold mt-8">
+                      درباره ما 
+
+              </h1>
+            </div>
+            </div>
+
           <Row className="flex items-center mt-8">
             <Col md={6}>
               <Image

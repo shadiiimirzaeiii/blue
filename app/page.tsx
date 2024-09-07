@@ -46,7 +46,6 @@ export default function Home() {
   return (
     <>
       <Container className="w-full min-w-[1444px] mx-0 p-0">
-
         <div className="relative ">
           <Image
             src={landingBanner}
@@ -66,7 +65,7 @@ export default function Home() {
         </div>
         <Container>
           <div className="flex justify-center">
-            <div className="w-208 border-b-2 border-orange700 flex items-center justify-center p-2">
+            <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
               <h1 className="text-center text-black text-2xl font-bold mt-8">
                 دسته بندی تجهیزات
               </h1>
@@ -88,9 +87,13 @@ export default function Home() {
             ))}
           </Row>
           <Row>
-            <h1 className="text-center text-black text-2xl font-bold mt-8">
-              انتخاب با شماست
-            </h1>
+               <div className="flex justify-center">
+            <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
+              <h1 className="text-center text-black text-2xl font-bold mt-8">
+                انتخاب با شماست
+              </h1>
+            </div>
+            </div>
             <h4 className="text-center text-black text-base font-extralight mb-8">
               با توجه به نیاز خود وارد داشبورد مورد نظر شوید و از امکانات بلو
               لاین بهره مند شوید.
