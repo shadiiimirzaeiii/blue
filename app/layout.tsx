@@ -4,6 +4,7 @@ import LocalFont from "@next/font/local";
 // import LocalFont from "../libs/font";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
+import { Container } from "react-bootstrap";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -12,7 +13,16 @@ export const metadata: Metadata = {
 };
 
 const bluelinefont = LocalFont({
-  src: '../public/fonts/Yekan-Bakh-Regular.ttf', 
+    src: [
+    {
+      path: '../public/fonts/Yekan-Bakh-Regular.ttf' ,
+      weight: 'normal',
+      style: 'normal',
+      
+    },
+     
+  ],
+  variable: '--font-custom1',
   display: 'swap', 
 });
 
@@ -24,9 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      
-      <body className={bluelinefont.className}>{children}</body>
+    <html >
+      <body className={`${bluelinefont.variable} max-w-[1531px] mx-auto `}>
+        {children}
+        </body>
     </html>
   );
 }

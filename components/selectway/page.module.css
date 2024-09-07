@@ -1,59 +1,40 @@
 .splitScreen {
     height: 300px;
-    /* Adjust the height as needed */
     overflow: hidden;
     position: relative;
-}
-
-.row {
-    height: 100%;
-    position: relative;
-    margin: 0;
-    /* Remove margin from row */
-    padding: 0;
-    /* Remove padding from row */
-}
-
-.section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
+    border-radius: 20px;
 }
 
 .leftSection {
     background: linear-gradient(274.66deg, #3F83F8 31.76%, #EF550A 174.72%);
-    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
-    margin-top: -20px;
-    /* Adjust positioning as needed */
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    margin-top: 20px;
     padding: 0;
-    /* Ensure no internal padding */
     border-radius: 20px;
-    /* Apply rounded corners */
+    position: relative;
+    /* Ensure it's positioned correctly */
 }
 
 .rightSection {
     background: linear-gradient(99.24deg, #EDEEF0 47.06%, #EF550A 229.54%);
-    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
-    margin-top: 20px;
-    /* Adjust positioning as needed */
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    margin-top: -20px;
     padding: 0;
-    /* Ensure no internal padding */
     border-radius: 20px;
-    /* Apply rounded corners */
+    position: relative;
+    /* Ensure it's positioned correctly */
 }
 
 .content {
     position: relative;
     z-index: 2;
+    color: white;
+    /* Ensure text color is set */
 }
 
 .rightSection .content {
     color: black;
+    /* Override text color for the right section */
 }
 
 .button {
@@ -63,11 +44,16 @@
 }
 
 .leftSection .button {
-    background-color: #0056b3;
+    background-color: #f15025;
     border: none;
 }
 
 .rightSection .button {
-    background-color: #f15025;
+    background-color: #0056b3;
     border: none;
 }
+
+
+
+        /* background: linear-gradient(274.66deg, #3F83F8 31.76%, #EF550A 174.72%); */
+      /* right          background: linear-gradient(99.24deg, #EDEEF0 47.06%, #EF550A 229.54%); */
