@@ -11,7 +11,7 @@ interface CategoryCardProps {
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ title, description }) => {
   return (
-    <Card className="w-full h-[322px] flex flex-col items-center justify-between p-5 rounded-tl-lg bg-white shadow-md mb-4">
+    <Card className="w-[277px] h-[322px] flex flex-col items-center  p-1 rounded-tl-lg bg-white shadow-md mb-4 justify-center">
       <div className="w-[56px] h-[56px] flex items-center justify-center mt-[3%]">
         <Image src={gps} alt="GPS icon" width={56} height={56} />
       </div>

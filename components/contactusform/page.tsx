@@ -6,7 +6,7 @@ import ContactUs from '../../public/contactusform.png';
 
 const ContactForm: React.FC = () => {
   return (
-    <Container className="my-12 p-5 bg-white rounded-lg shadow-md w-4/5 mx-auto">
+    <Container className="my-12 p-5 bg-white rounded-lg shadow-md mx-auto w-[972px]">
       <Row>
         <Col md={6} className="pl-4">
           <h2 className="text-center mb-5 text-2xl font-semibold">تماس با ما</h2>

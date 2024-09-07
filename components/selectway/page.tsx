@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 
 const SplitScreen: React.FC = () => {
   return (
-    <div className={`relative flex h-[300px] w-full rounded-lg overflow-hidden ${styles.splitScreen}`}>
+    <div className={`relative flex h-[300px] w-[1160px] rounded-lg overflow-hidden ${styles.splitScreen}`}>
       <div className={`relative flex-1 ${styles.leftSection}`}>
         <div className={`${styles.content} text-center p-5`}>
           <h2 className="text-2xl font-bold">اجاره تجهیز میخواهی؟</h2>

@@ -9,8 +9,13 @@ module.exports = {
         colors: {
         // Define your custom colors
         mainblue: '#0147F5',
-        orange700: '#FE8400'
+        orange700: '#FE8400',
+        footerbackground : '#141414'
+       
       },
+      height:{
+         footerheight : "400px"
+      }
     },
   },
   plugins: [],

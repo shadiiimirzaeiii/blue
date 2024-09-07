@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import LocalFont from "@next/font/local";
-// import LocalFont from "../libs/font";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
-import { Container } from "react-bootstrap";
+import NavbarComponent from "../components/navbar/page";
+import Footer from '../components/footer/page'
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -34,10 +35,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html >
-      <body className={`${bluelinefont.variable} max-w-[1531px] mx-auto `}>
-        {children}
-        </body>
+      <html>
+      <body className={`${bluelinefont.variable} min-h-screen flex flex-col`}>
+        <NavbarComponent />
+        <main className="flex-grow max-w-[1531px] mx-auto w-full">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

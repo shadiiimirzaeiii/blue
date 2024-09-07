@@ -6,7 +6,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 function AboutUs() {
   return (
     <>
-            <Row className="text-center text-black text-2xl font-bold mt-12">
+            <div className="text-center text-black text-2xl font-bold mt-12 w-[1160px]">
           <h1> درباره ما </h1>
           <Row className="flex items-center mt-8">
             <Col md={6}>
@@ -30,7 +30,7 @@ function AboutUs() {
               </p>
             </Col>
           </Row>
-          </Row>
+          </div>
 
     </>
   )
