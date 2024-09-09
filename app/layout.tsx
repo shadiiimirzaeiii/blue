@@ -36,12 +36,10 @@ export default function RootLayout({
 }) {
   return (
       <html>
-      <body className={`${bluelinefont.variable} min-h-screen flex flex-col`}>
-        <NavbarComponent />
+      <body className={`${bluelinefont.className} min-h-screen flex flex-col`}>
         <main className="flex-grow max-w-[1531px] mx-auto w-full">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

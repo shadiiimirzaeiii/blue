@@ -22,7 +22,7 @@ function NavbarComponent() {
           </Navbar.Brand>
 
           <div className="flex-1 flex gap-2 ">
-            <Nav.Link href="#home" className="px-2 py-2">دسته بندی ها</Nav.Link>
+            <Nav.Link href="#home" className="px-2 py-2 mr-6">دسته بندی ها</Nav.Link>
             <Nav.Link href="#home" className="px-2 py-2">اجاره تجهیز</Nav.Link>
             <Nav.Link href="#home" className="px-2 py-2">سوالات متداول</Nav.Link>
             <Nav.Link href="#home" className="px-2 py-2">درباره ما</Nav.Link>
