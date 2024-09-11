@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'Yekan Bakh';
-  src: url('../public/fonts/Yekan-Bakh-Regular.ttf') format('ttf') !important;
-  font-weight: normal;
-  font-style: normal;
-} */
-
 
 :root {
   direction: rtl !important;

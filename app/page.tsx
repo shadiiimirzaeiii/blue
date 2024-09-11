@@ -1,13 +1,13 @@
 import Image from "next/image";
-import landingBanner from "../public/Landing-Banner.png";
+import landingBanner from "../public/image/Landing-Banner.png";
 import SearchBar from "../components/searchbar/page";
 import CategoryCard from "../components/categorycard/page";
 import { Row, Col, Container } from "react-bootstrap";
 import ContactusForm from "../components/contactusform/page";
 import SelectWay from "../components/selectway/page";
 import AboutUs from "../components/aboutus/page";
-import NavBar from '../components/navbar/page';
-import Footer from '../components/footer/page';
+import NavBar from "../components/navbar/page";
+import Footer from "../components/footer/page";
 export default function Home() {
   const categories = [
     {
@@ -51,11 +51,10 @@ export default function Home() {
           <Image
             src={landingBanner}
             alt="banner"
-            layout="intrinsic"
             width={1444}
             className="w-full h-auto filter brightness-50"
           />
-          <NavBar/>
+          <NavBar />
           <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold text-center p-2 w-3/5 	">
             با انتخاب ما از اجاره تجهیز خود مطمئن شوید!
           </h1>
@@ -65,7 +64,7 @@ export default function Home() {
           </h4>
           <SearchBar />
         </div>
-        
+
         <Container>
           <div className="flex justify-center">
             <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
@@ -90,12 +89,12 @@ export default function Home() {
             ))}
           </Row>
           <Row>
-               <div className="flex justify-center">
-            <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
-              <h1 className="text-center text-black text-2xl font-bold mt-8">
-                انتخاب با شماست
-              </h1>
-            </div>
+            <div className="flex justify-center">
+              <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
+                <h1 className="text-center text-black text-2xl font-bold mt-8">
+                  انتخاب با شماست
+                </h1>
+              </div>
             </div>
             <h4 className="text-center text-black text-base font-extralight mb-8">
               با توجه به نیاز خود وارد داشبورد مورد نظر شوید و از امکانات بلو
@@ -110,7 +109,7 @@ export default function Home() {
           </div>
           <ContactusForm />
         </Container>
-        <Footer/>
+        <Footer />
       </Container>
     </>
   );

@@ -14,7 +14,9 @@ module.exports = {
          customlightblue : 'rgba(227, 236, 252, 1)',
          advancedsearchborder: '#F1F5F9',
          searchtextcolor : '#64748B',
-         boxshadowsearch : "#00000180"
+         buttonborder : '#F1F5F9',
+         seachnavbarborder : '1px solid #F1F5F9'
+        
       
        
       },
@@ -23,9 +25,15 @@ module.exports = {
       },
       width:{
         searchcardwidth: "536px" 
-      }
+      },
+        boxShadow: {
+        left: '-1px 0 2px #00000080 ', 
+         buttonshadow: '0px 1px 3px 0px rgba(30, 41, 59, 0.5)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+     require('tailwind-scrollbar-hide'),
+  ],
 }
 

@@ -2,19 +2,19 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Image from "next/image";
-import ContactUs from "../../public/contactusform.png";
+import ContactUs from "../../public/image/contactusform.png";
 
 const ContactForm: React.FC = () => {
   return (
     <Container className="my-12 p-5 bg-white rounded-lg shadow-md mx-auto w-[972px]">
       <Row>
-                    <div className="flex justify-center">
-              <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
-                <h1 className="text-center text-black text-2xl font-bold mt-8">
-                  تماس با ما
-                </h1>
-              </div>
+        <div className="flex justify-center">
+          <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
+            <h1 className="text-center text-black text-2xl font-bold mt-8">
+              تماس با ما
+            </h1>
           </div>
+        </div>
 
         <Col md={6} className="pl-4">
           <Form>
@@ -52,13 +52,7 @@ const ContactForm: React.FC = () => {
           </Form>
         </Col>
         <Col md={6} className="pr-4">
-          <Image
-            src={ContactUs}
-            alt="Contact"
-            width={500}
-            height={500}
-            layout="responsive"
-          />
+          <Image src={ContactUs} alt="Contact" width={500} height={500} />
         </Col>
       </Row>
     </Container>

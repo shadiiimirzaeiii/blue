@@ -1,19 +1,23 @@
-// components/searchcard/page.tsx
 import React from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import Image from "next/image";
 
 interface SearchCardProps {
-  image: any; // Use string for image path or URL
+  image: any;
   title: string;
   priceLabel: string;
   price: string;
 }
 
-const SearchCard: React.FC<SearchCardProps> = ({ image, title, priceLabel, price }) => {
+const SearchCard: React.FC<SearchCardProps> = ({
+  image,
+  title,
+  priceLabel,
+  price,
+}) => {
   return (
     <Container className="flex !flex-row mb-2">
-      <Card className="flex !flex-row h-36 w-[491px]">
+      <Card className="flex !flex-row h-36 w-[476px] ">
         <Image
           src={image}
           alt={title}
@@ -27,7 +31,9 @@ const SearchCard: React.FC<SearchCardProps> = ({ image, title, priceLabel, price
           </Card.Title>
           <div className="flex flex-row">
             <h4 className="flex-1 text-right">{priceLabel}</h4>
-            <h4 className="flex-1 text-left">{price}</h4>
+            <h4 className="flex-1 text-left text-mainblue text-lg font-bold	">
+              {price}تومان
+            </h4>
           </div>
           <Button className="bg-mainblue w-full mt-3">درخواست رزرو</Button>
         </Card.Body>

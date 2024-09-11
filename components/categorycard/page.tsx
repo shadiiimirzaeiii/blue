@@ -1,7 +1,7 @@
-"use client"; 
+"use client";
 import React from "react";
 import Card from "react-bootstrap/Card";
-import gps from "../../public/gps.png";
+import gps from "../../public/image/gps.png";
 import Image from "next/image";
 
 interface CategoryCardProps {
@@ -11,8 +11,8 @@ interface CategoryCardProps {
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ title, description }) => {
   return (
-    <Card className="w-[277px] h-[322px] flex flex-col items-center  p-1 rounded-tl-lg bg-white shadow-md mb-4 justify-center">
-      <div className="w-[56px] h-[56px] flex items-center justify-center mt-[3%]">
+    <Card className="w-[277px] h-[322px] flex flex-col items-center  p-1 rounded-tl-lg bg-white shadow-md mb-4 justify-center !pt-11">
+      <div className="w-[56px] h-[56px] flex items-center justify-center ">
         <Image src={gps} alt="GPS icon" width={56} height={56} />
       </div>
       <Card.Body className="flex flex-col items-center">
