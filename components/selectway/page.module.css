@@ -3,6 +3,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 20px;
+  /* Overall border radius for the container */
 }
 
 .leftSection {
@@ -10,8 +11,11 @@
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
   margin-top: 20px;
   padding: 0;
-  border-radius: 0;
   position: relative;
+  border-top-left-radius: 20px;
+  /* Rounded top-left corner */
+  border-bottom-left-radius: 20px;
+  /* Rounded bottom-left corner */
 }
 
 .rightSection {
@@ -19,8 +23,11 @@
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
   margin-top: -20px;
   padding: 0;
-  border-radius: 0px;
   position: relative;
+  border-top-left-radius: 60px;
+  /* Rounded top-right corner */
+  border-bottom-left-radius: 40px;
+  /* Rounded bottom-right corner */
 }
 
 .content {

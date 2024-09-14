@@ -13,7 +13,7 @@ function NavbarComponent() {
       <Navbar
         bg="light"
         data-bs-theme="light"
-        className=" shadow-md fixed z-[10000] top-2 left-0 right-0 h-[90px] rounded-t-lg bg-white px-0"
+        className=" shadow-md fixed z-[10000] top-2 left-2 right-1 h-[90px] rounded-t-lg bg-white px-0"
       >
         <Container className="flex h-full px-0 m-0 items-center pl-8">
           <Navbar.Brand href="#home">
@@ -41,7 +41,7 @@ function NavbarComponent() {
           <div className="flex gap-2 pl-8">
             <Button
               variant="light"
-              className="border border-mainblue text-mainblue px-4 py-2 rounded-md"
+              className="border-2 border-mainblue text-mainblue px-4 py-2 rounded-md bg-white"
             >
               اجاره تجهیزات می خواهم
             </Button>

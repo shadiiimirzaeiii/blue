@@ -55,7 +55,7 @@ export default function Home() {
             className="w-full h-auto filter brightness-50 mx-auto"
           />
           <NavBar />
-          <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold text-center p-2 w-3/5 	">
+          <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 font-bold -translate-y-1/2 text-white text-4xl   text-center p-2 w-3/5 	">
             با انتخاب ما از اجاره تجهیز خود مطمئن شوید!
           </h1>
           <h4 className="absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-base font-extralight text-center p-2 w-4/5">
@@ -67,7 +67,7 @@ export default function Home() {
 
         <Container>
           <div className="flex justify-center">
-            <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
+            <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
               <h1 className="text-center text-black text-2xl font-bold mt-8">
                 دسته بندی تجهیزات
               </h1>
@@ -78,19 +78,24 @@ export default function Home() {
             بلو لاین به عنوان یک کمپانی با سابقه درخشان، گستره وسیعی از خدمات
             کاربردی و مفید را به مشتریان خود عرضه می کند.
           </h4>
-          <Row className="mt-8 mr-8 ml-8 pr-8">
-            {categories.map((category, index) => (
-              <Col key={index} className="mb-4 grid-cols-4 gap-2 pr-4">
-                <CategoryCard
-                  title={category.title}
-                  description={category.description}
-                />
-              </Col>
-            ))}
-          </Row>
+          <div className="flex flex-col justify-center items-center h-[835px] px-8">
+            <div className="w-full max-w-[1156px]">
+              <Row className="mt-8 flex flex-wrap gap-2">
+                {categories.map((category, index) => (
+                  <div key={index} className="w-[calc(25%-8px)] mb-2 ">
+                    <CategoryCard
+                      title={category.title}
+                      description={category.description}
+                    />
+                  </div>
+                ))}
+              </Row>
+            </div>
+          </div>
+
           <Row>
             <div className="flex justify-center">
-              <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-20">
+              <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
                 <h1 className="text-center text-black text-2xl font-bold mt-8">
                   انتخاب با شماست
                 </h1>
@@ -105,6 +110,7 @@ export default function Home() {
             </div>
           </Row>
           <div className="justify-center row">
+
             <AboutUs />
           </div>
           <ContactusForm />

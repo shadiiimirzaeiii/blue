@@ -25,7 +25,17 @@ module.exports = {
       boxShadow: {
         left: "-1px 0 2px #00000080 ",
         buttonshadow: "0px 1px 3px 0px rgba(30, 41, 59, 0.5)",
+        cardshadow:'0px 5px 20px 0px rgba(0, 0, 0, 0.1)',
+        contactusshadow: '0px 0px 40px 0px rgba(0, 0, 0, 0.05)',
+
       },
+        fontFamily: {
+        regular: 'var(--font-regular)', // Regular font
+        bold: 'var(--font-bold)',       // Bold font
+      },
+      radius: {
+        navbarradius: '20px, 20px, 0px, 0px'
+      }
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],
