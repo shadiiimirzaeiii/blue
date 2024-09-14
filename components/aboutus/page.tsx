@@ -24,7 +24,7 @@ function AboutUs() {
             />
           </div>
           <div className="col-6">
-            <p className="p-8 font-regular text-lg">
+            <p className="p-8 font-regular font-extralight text-lg">
               ما یک تیم متخصص و پویا هستیم که به ارائه خدمات اجاره تجهیزات با
               کیفیت و قابل اعتماد، متعهد می باشیم. از مزایای اجاره تجهیزات از
               ما، ارائه قیمت‌های رقابتی و شفاف است. با ارائه خدماتی مانند بیمه
