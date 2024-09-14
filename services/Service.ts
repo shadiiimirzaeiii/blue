@@ -1,3 +1,4 @@
+import slider from '../public/image/slider.png'
 interface Cards {
   id: number;
   image: any;
@@ -52,10 +53,27 @@ export async function fetchCards(page: number): Promise<Cards[]> {
   return mockCards.slice(start, end);
 }
 
-// for advanced search navbar
-export async function sendSearchInputToService(
-  inputValue: string
-): Promise<void> {
-  console.log("from front", inputValue);
-  return new Promise((resolve) => setTimeout(() => resolve(), 1000));
-}
+// // for advanced search navbar
+// export async function sendSearchInputToService(
+//   inputValue: string
+// ): Promise<void> {
+//   console.log("from front", inputValue);
+//   return new Promise((resolve) => setTimeout(() => resolve(), 1000));
+// }
+
+
+// export const fetchSampleImages = async (): Promise<string[]> => {
+//   // Sample image URLs directly
+//   return [
+//     '../public/image/slider.pngimport ',
+//     '/images/sample2.jpg',
+//     '/images/sample3.jpg',
+//     '/images/sample4.jpg',
+//     '/images/sample5.jpg',
+//     '/images/sample6.jpg',
+//     '/images/sample7.jpg',
+//     '/images/sample8.jpg',
+//     '/images/sample9.jpg',
+//     '/images/sample10.jpg',
+//   ];
+// };

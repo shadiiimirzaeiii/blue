@@ -52,7 +52,7 @@ export default function Home() {
             src={landingBanner}
             alt="banner"
             width={1444}
-            className="w-full h-auto filter brightness-50"
+            className="w-full h-auto filter brightness-50 mx-auto"
           />
           <NavBar />
           <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold text-center p-2 w-3/5 	">
