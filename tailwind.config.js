@@ -35,7 +35,12 @@ module.exports = {
       },
       radius: {
         navbarradius: '20px, 20px, 0px, 0px'
-      }
+      },
+        screens: {
+    sm: { min: '1280px', max: '1439px' },
+      xl:'1440px'
+     
+        },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

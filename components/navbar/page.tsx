@@ -13,9 +13,9 @@ function NavbarComponent() {
       <Navbar
         bg="light"
         data-bs-theme="light"
-        className=" shadow-md fixed z-[10000] top-2 left-2 right-1 h-[90px] rounded-t-lg bg-white px-0"
+        className=" shadow-md fixed z-[10000] top-2 left-2 right-2 h-[90px] rounded-t-lg bg-white px-0"
       >
-        <Container className="flex h-full px-0 m-0 items-center pl-8">
+        <div className="flex h-full px-0 m-0 items-center pl-8 w-[1440px]">
           <Navbar.Brand href="#home">
             <Image src={Logo} alt="Logo" width={180} height={35} />
           </Navbar.Brand>
@@ -49,7 +49,7 @@ function NavbarComponent() {
               تجهیزات صنعتی دارم
             </Button>
           </div>
-        </Container>
+        </div>
       </Navbar>
     </div>
   );

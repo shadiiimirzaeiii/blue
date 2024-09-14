@@ -58,7 +58,7 @@ export default function Home() {
           <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 font-bold -translate-y-1/2 text-white text-4xl   text-center p-2 w-3/5 	">
             با انتخاب ما از اجاره تجهیز خود مطمئن شوید!
           </h1>
-          <h4 className="absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-base font-extralight text-center p-2 w-4/5">
+          <h4 className="absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl	  font-extralight text-center p-2 w-4/5">
             بلو لاین آماده ارائه بهترین خدمات در زمینه اجاره تجهیزات صنعتی
             کارآمد و راحت، به شماست.
           </h4>
@@ -66,21 +66,21 @@ export default function Home() {
         </div>
 
         <Container>
-          <div className="flex justify-center">
-            <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
+          <div className="flex justify-center mt-5">
+            <div className="w-[181px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
               <h1 className="text-center text-black text-2xl font-bold mt-8">
                 دسته بندی تجهیزات
               </h1>
             </div>
           </div>
 
-          <h4 className="text-center text-black text-base font-extralight mb-8">
+          <h4 className="text-center text-black text-base font-extralight ">
             بلو لاین به عنوان یک کمپانی با سابقه درخشان، گستره وسیعی از خدمات
             کاربردی و مفید را به مشتریان خود عرضه می کند.
           </h4>
-          <div className="flex flex-col justify-center items-center h-[835px] px-8">
+          <div className="flex flex-col justify-center items-center h-[766px] px-8">
             <div className="w-full max-w-[1156px]">
-              <Row className="mt-8 flex flex-wrap gap-2">
+              <Row className="mt-0 flex flex-wrap gap-2">
                 {categories.map((category, index) => (
                   <div key={index} className="w-[calc(25%-8px)] mb-2 ">
                     <CategoryCard
@@ -95,7 +95,7 @@ export default function Home() {
 
           <Row>
             <div className="flex justify-center">
-              <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
+              <div className="w-[161px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
                 <h1 className="text-center text-black text-2xl font-bold mt-8">
                   انتخاب با شماست
                 </h1>

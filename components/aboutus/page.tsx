@@ -8,14 +8,14 @@ function AboutUs() {
     <>
       <div className="text-center text-black text-2xl font-bold mt-12 w-[1160px] mb-0 h-[354px]">
         <div className="flex justify-center">
-          <div className="w-[208px] border-b-2 border-orange700 flex items-center justify-center  mb-4">
+          <div className="w-[72px] border-b-2 border-orange700 flex items-center justify-center  mb-4">
             <h1 className="text-center text-black text-2xl font-bold mt-8">
               درباره ما
             </h1>
           </div>
         </div>
 
-        <Row className="flex  mt-4 w-[979px] h-[480px] justify-center mr-20">
+        <Row className="flex  mt-4 w-[979px] h-[580px] justify-center mr-20">
           <div className="col-6">
             <Image
               src={Aboutus}
@@ -24,15 +24,22 @@ function AboutUs() {
             />
           </div>
           <div className="col-6">
-            <p className="p-8 font-regular font-extralight text-lg">
+            <p className="p-8 font-regular font-extralight text-lg text-right">
               ما یک تیم متخصص و پویا هستیم که به ارائه خدمات اجاره تجهیزات با
               کیفیت و قابل اعتماد، متعهد می باشیم. از مزایای اجاره تجهیزات از
               ما، ارائه قیمت‌های رقابتی و شفاف است. با ارائه خدماتی مانند بیمه
               کامل، خدمات پشتیبانی 24 ساعته و امکان تحویل تجهیز در محل مورد نظر
               شما، سعی می‌کنیم تجربه اجاره تجهیزات را برای شما، بهبود دهیم......
               <br />
-              <a href="#">بیشتر بخوانید</a>
             </p>
+<div className="text-right pr-8">
+  <a
+    href="#"
+    className="mt-6 font-regular font-extralight text-lg text-mainblue"
+  >
+    بیشتر بخوانید
+  </a>
+</div>
           </div>
         </Row>
       </div>
