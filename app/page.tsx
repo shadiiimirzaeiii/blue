@@ -78,11 +78,11 @@ export default function Home() {
             بلو لاین به عنوان یک کمپانی با سابقه درخشان، گستره وسیعی از خدمات
             کاربردی و مفید را به مشتریان خود عرضه می کند.
           </h4>
-          <div className="flex flex-col justify-center items-center h-[766px] px-8">
+          <div className="flex flex-col justify-center items-center h-[766px]  pr-0 pl-12">
             <div className="w-full max-w-[1156px]">
               <Row className="mt-0 flex flex-wrap gap-2">
                 {categories.map((category, index) => (
-                  <div key={index} className="w-[calc(25%-8px)] mb-2 ">
+                  <div key={index} className="w-[calc(25%-8px)] mb-1 ">
                     <CategoryCard
                       title={category.title}
                       description={category.description}

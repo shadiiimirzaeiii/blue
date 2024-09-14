@@ -15,16 +15,16 @@ function AboutUs() {
           </div>
         </div>
 
-        <Row className="flex  mt-4 w-[979px] h-[580px] justify-center mr-20">
-          <div className="col-6">
+        <div className="!flex !flex-row  mt-4  justify-center mr-14">
+          <div className=" w-[548px] h-[354px]">
             <Image
               src={Aboutus}
               alt="aboutus"
               className="w-full rounded-tl-lg rounded-bl-lg"
             />
           </div>
-          <div className="col-6">
-            <p className="p-8 font-regular font-extralight text-lg text-right">
+          <div className="w-[580px]">
+            <p className="p-8 font-regular font-normal text-lg text-aboutuscolor text-right">
               ما یک تیم متخصص و پویا هستیم که به ارائه خدمات اجاره تجهیزات با
               کیفیت و قابل اعتماد، متعهد می باشیم. از مزایای اجاره تجهیزات از
               ما، ارائه قیمت‌های رقابتی و شفاف است. با ارائه خدماتی مانند بیمه
@@ -32,16 +32,16 @@ function AboutUs() {
               شما، سعی می‌کنیم تجربه اجاره تجهیزات را برای شما، بهبود دهیم......
               <br />
             </p>
-<div className="text-right pr-8">
-  <a
-    href="#"
-    className="mt-6 font-regular font-extralight text-lg text-mainblue"
-  >
-    بیشتر بخوانید
-  </a>
-</div>
+            <div className="text-right mr-9">
+              <a
+                href="#"
+                className="mt-6 font-regular font-extralight text-lg text-mainblue"
+              >
+                بیشتر بخوانید
+              </a>
+            </div>
           </div>
-        </Row>
+        </div>
       </div>
     </>
   );

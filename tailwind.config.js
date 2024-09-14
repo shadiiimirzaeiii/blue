@@ -15,6 +15,7 @@ module.exports = {
         searchtextcolor: "#64748B",
         buttonborder: "#F1F5F9",
         seachnavbarborder: "1px solid #F1F5F9",
+        aboutuscolor: '#575757'
       },
       height: {
         footerheight: "400px",

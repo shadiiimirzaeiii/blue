@@ -8,7 +8,7 @@ const ContactForm: React.FC = () => {
   return (
     <>
             <div className="flex justify-center !mt-16">
-          <div className="w-[104px] border-b-2 border-orange700 flex items-center justify-center p-2 ">
+          <div className="w-[104px] border-b-2 border-orange700 flex items-center justify-center p-2 mt-16 pt-12">
             <h1 className="text-center text-black text-2xl font-bold mt-8">
               تماس با ما
             </h1>
