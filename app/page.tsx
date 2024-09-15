@@ -65,7 +65,8 @@ export default function Home() {
           <SearchBar />
         </div>
 
-        <Container>
+        <Container className="xlcustom:mr-12 ">
+          <Container className="  w-[1280px] xlcustom:w-[1196px] xlcustom:mr-0 xlcustom:pr-0">
           <div className="flex justify-center mt-5">
             <div className="w-[181px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
               <h1 className="text-center text-black text-2xl font-bold mt-8">
@@ -92,8 +93,8 @@ export default function Home() {
               </Row>
             </div>
           </div>
-
-          <Row>
+</Container>
+          <Row className="xlcustom:pl-16">
             <div className="flex justify-center">
               <div className="w-[161px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
                 <h1 className="text-center text-black text-2xl font-bold mt-8">
@@ -109,11 +110,12 @@ export default function Home() {
               <SelectWay />
             </div>
           </Row>
-          <div className="justify-center row">
-
+          <div className="justify-center row xlcustom:pl-16" >
             <AboutUs />
           </div>
+          <div className="xlcustom:pl-16">
           <ContactusForm />
+          </div>
         </Container>
         <Footer />
       </Container>

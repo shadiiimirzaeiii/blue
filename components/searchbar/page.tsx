@@ -15,7 +15,7 @@ function SearchBar() {
   };
 
   return (
-    <Row className="absolute top-[57%] left-[11%] w-[1160px] flex flex-row bg-[rgba(182,184,177,0.4)] h-[128px] justify-center p-2 rounded-lg   ">
+    <Row className="absolute top-[57%] left-[10%] w-[1160px] flex flex-row bg-[rgba(182,184,177,0.4)] h-[128px] justify-center p-2 rounded-lg  xlcustom:right-20">
       <div className="w-[1118px] bg-white rounded-lg p-1 h-[95px] pt-2 pb-1 mt-2">
         <input
           type="text"

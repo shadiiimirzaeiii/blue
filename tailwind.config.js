@@ -1,3 +1,5 @@
+const { only } = require('node:test')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -38,8 +40,8 @@ module.exports = {
         navbarradius: '20px, 20px, 0px, 0px'
       },
         screens: {
-    sm: { min: '1280px', max: '1439px' },
-      xl:'1440px'
+    'xlcustom' : {'min': '1280px', 'max' : '1439px'},
+      xxl : {"min":'1440px'}
      
         },
     },
