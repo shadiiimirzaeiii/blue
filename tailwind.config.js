@@ -41,7 +41,7 @@ module.exports = {
       },
         screens: {
     'xlcustom' : {'min': '1280px', 'max' : '1439px'},
-      xxl : {"min":'1440px'}
+    
      
         },
     },
