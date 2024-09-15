@@ -47,15 +47,17 @@ export default function Home() {
 
   return (
     <>
-      <Container fluid className="p-0">
+      {/* Removed min-w-[1444px] and made the width responsive */}
+      <Container className="w-full mx-0 p-0 justify-center">
         <div className="relative">
           <Image
             src={landingBanner}
             alt="banner"
-            className="w-full h-auto filter brightness-50"
+            width={1444}
+            className="w-full h-auto filter brightness-50 mx-auto"
           />
           <NavBar />
-          <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold text-center p-2 w-3/5">
+          <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 font-bold -translate-y-1/2 text-white text-4xl text-center p-2 w-3/5">
             با انتخاب ما از اجاره تجهیز خود مطمئن شوید!
           </h1>
           <h4 className="absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-extralight text-center p-2 w-4/5">
@@ -65,8 +67,9 @@ export default function Home() {
           <SearchBar />
         </div>
 
+        {/* Adjustments for xlcustom screens */}
         <Container className="xlcustom:mr-12">
-          <Container className="w-[1280px] xlcustom:w-[1196px] xlcustom:mr-0 xlcustom:pr-0">
+          <Container className="w-full xl:w-[1444px] xlcustom:w-[1196px] xlcustom:mr-0 xlcustom:pr-0">
             <div className="flex justify-center mt-5">
               <div className="w-[181px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
                 <h1 className="text-center text-black text-2xl font-bold mt-8">
@@ -94,7 +97,6 @@ export default function Home() {
               </div>
             </div>
           </Container>
-
           <Row className="xlcustom:pl-16">
             <div className="flex justify-center">
               <div className="w-[161px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
@@ -111,7 +113,6 @@ export default function Home() {
               <SelectWay />
             </div>
           </Row>
-
           <div className="justify-center row xlcustom:pl-16">
             <AboutUs />
           </div>
