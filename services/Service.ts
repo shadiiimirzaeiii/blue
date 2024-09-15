@@ -77,3 +77,26 @@ export async function fetchCards(page: number): Promise<Cards[]> {
 //     '/images/sample10.jpg',
 //   ];
 // };
+// Mock data for demonstration
+const mockData = [
+  { id: 1, name: "Example Item 1" },
+  { id: 2, name: "Example Item 2" },
+  { id: 3, name: "Example Item 3" },
+  { id: 4, name: "Example Item 4" },
+];
+
+// Function to simulate sending search input to a service
+export async function sendSearchInputToService(searchInput: string): Promise<void> {
+  // Simulating a delay to mimic network request
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  // Filtering mock data based on search input
+  const results = mockData.filter((item) =>
+    item.name.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
+  console.log("Search results:", results);
+
+  // For demonstration purposes, logging the results to the console.
+  // In a real application, you might handle results here or return them.
+}

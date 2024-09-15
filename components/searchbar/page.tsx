@@ -10,7 +10,7 @@ function SearchBar() {
 
   const handleSearch = () => {
     if (query) {
-      router.push(`/advancedsearch?query=${encodeURIComponent(query)}`);
+      router.push(`/search?query=${encodeURIComponent(query)}`);
     }
   };
 

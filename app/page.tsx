@@ -97,7 +97,7 @@ export default function Home() {
               </div>
             </div>
           </Container>
-          <Row className="xlcustom:pl-16">
+          <Row className="xlcustom:pl-18">
             <div className="flex justify-center">
               <div className="w-[161px] border-b-2 border-orange700 flex items-center justify-center p-2 mb-4">
                 <h1 className="text-center text-black text-2xl font-bold mt-8">
@@ -109,7 +109,7 @@ export default function Home() {
               با توجه به نیاز خود وارد داشبورد مورد نظر شوید و از امکانات بلو
               لاین بهره مند شوید.
             </h4>
-            <div className="justify-center row">
+            <div className="justify-center row ">
               <SelectWay />
             </div>
           </Row>

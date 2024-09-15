@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import RightArrow from "../../public/icon/rightarrow.svg";
@@ -6,10 +8,14 @@ import CategoryIcon from "../../public/icon/category.svg";
 import ProfileIcon from "../../public/icon/profile.svg";
 import { sendSearchInputToService } from "../../services/Service";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  initialQuery: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ initialQuery }) => {
   const [isFocused, setIsFocused] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchInputValue, setSearchInputValue] = useState("");
+  const [searchQuery, setSearchQuery] = useState(initialQuery);
+  const [searchInputValue, setSearchInputValue] = useState(initialQuery);
   const scrollRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -26,9 +32,7 @@ const Navbar: React.FC = () => {
     }
   };
 
-  // options for the dropdown as props
-  const options = ["آذربایجان شرقی", "فارس", " گیلان", " کرمانشاه", "تهران"];
-
+  const options = ["آذربایجان شرقی", "فارس", "گیلان", "کرمانشاه", "تهران"];
   const filteredOptions = options.filter((option) =>
     option.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -76,6 +80,11 @@ const Navbar: React.FC = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    setSearchQuery(initialQuery);
+    setSearchInputValue(initialQuery);
+  }, [initialQuery]);
 
   return (
     <nav className="w-full h-[71px] flex items-center border-2 mt-2 navbar-expand">

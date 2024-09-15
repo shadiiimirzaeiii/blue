@@ -4,6 +4,9 @@ import localFont from "next/font/local"; // Correct import
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
+import { AppProps } from 'next/app';
+
+
 
 // Google Font (optional)
 const inter = Inter({ subsets: ["latin"] });

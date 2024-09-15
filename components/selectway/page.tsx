@@ -2,7 +2,7 @@ import React from "react";
 
 const SplitScreen: React.FC = () => {
   return (
-    <div className="relative flex w-[1160px]">
+    <div className="relative flex w-[1160px] xlcustom:ml-[67px]">
       <div className=" h-[307px] relative flex-1 bg-gradient-to-r from-blue-500 to-orange-600 flex items-center justify-center !rounded-lg">
         <div className="text-center text-white">
           <h2 className="text-2xl font-bold">اجاره تجهیز میخواهی؟</h2>
