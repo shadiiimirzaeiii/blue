@@ -47,7 +47,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Removed min-w-[1444px] and made the width responsive */}
       <Container className="w-full mx-0 p-0 justify-center">
         <div className="relative">
           <Image
@@ -67,7 +66,6 @@ export default function Home() {
           <SearchBar />
         </div>
 
-        {/* Adjustments for xlcustom screens */}
         <Container className="xlcustom:mr-12">
           <Container className="w-full xl:w-[1444px] xlcustom:w-[1196px] xlcustom:mr-0 xlcustom:pr-0">
             <div className="flex justify-center mt-5">
