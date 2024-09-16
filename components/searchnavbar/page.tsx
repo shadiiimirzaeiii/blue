@@ -26,7 +26,7 @@ const SearchNavbar: React.FC = () => {
 
   return (
     <nav className="w-full h-[71px] flex items-center border-2 mt-2  ml-0">
-      <div className="relative flex items-center w-[571px] h-[40px] mr-28">
+      <div className="relative flex items-center w-[571px] h-[40px] mr-28 xlcustom:mr-[17px]">
         <button
           onClick={scrollLeft}
           className="absolute left-[-20px] w-[40px] h-[40px] bg-white shadow-buttonshadow rounded-full flex items-center justify-center z-10 mr-6"
@@ -69,7 +69,7 @@ const SearchNavbar: React.FC = () => {
         </button>
       </div>
 
-      <button className="w-[40px] h-[40px] ml-4 mr-[9rem] shadow-buttonshadow rounded-full flex items-center justify-center">
+      <button className="w-[40px] h-[40px] ml-4 mr-[9rem] xlcustom:mr-[75px] shadow-buttonshadow rounded-full flex items-center justify-center">
         <Image src={ProfileIcon} alt="Profile" className="w-[20px] h-[15px]" />
       </button>
     </nav>

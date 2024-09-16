@@ -57,7 +57,7 @@ const Searchbox: React.FC<SearchboxProps> = ({
   };
 
   return (
-    <div className="relative w-[516px] h-auto flex flex-col  mt-2 mr-2 rounded-lg  bg-white">
+    <div className="relative w-[516px] xlcustom:w-[498px] h-auto flex flex-col  mt-2 mr-2 rounded-lg  bg-white">
       {/* <div className="flex items-center border-b border-gray-200 p-2 h-[56px]"> */}
       <input
         type="text"
@@ -72,7 +72,7 @@ const Searchbox: React.FC<SearchboxProps> = ({
       {/* </div> */}
 
       {isFocused && (
-        <div className="w-[516px] p-0 rounded-b-lg mt-2">
+        <div className="w-[516px] xlcustom:w-[498px] p-0 rounded-b-lg mt-2">
           {/* <div className="flex items-center border border-seachnavbarborder rounded-lg p-2 h-[56px] bg-searchnavbarbg "> */}
           <input
             type="text"
@@ -88,7 +88,7 @@ const Searchbox: React.FC<SearchboxProps> = ({
               filteredOptions.map((option, idx) => (
                 <li
                   key={idx}
-                  className="p-2 hover:bg-dropdownhover cursor-pointer rounded-md"
+                  className="p-2 hover:bg-dropdownhover hover:text-mainblue cursor-pointer rounded-md"
                   onClick={() => {
                     setProvinceSearch(option);
                     setIsFocused(false);
@@ -98,7 +98,7 @@ const Searchbox: React.FC<SearchboxProps> = ({
                 </li>
               ))
             ) : (
-              <li className="p-2 text-gray-500">No results found</li>
+              <li className="p-2 text-gray-500">نتیجه ای پیدا نشد</li>
             )}
           </ul>
         </div>

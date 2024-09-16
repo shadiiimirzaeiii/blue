@@ -56,8 +56,8 @@ const AdvancedSearch: React.FC = () => {
   };
 
   return (
-    <Container className="w-full min-h-screen flex gap-[15px] !mx-0">
-      <div className="mt-3 w-[556px] h-[700px] shadow-left overflow-y-auto overflow-x-hidden flex flex-col">
+    <Container className="  w-full min-h-screen flex gap-[15px] !mx-0">
+      <div className="xlcustom:w-[536px] mt-3 w-[556px] h-[700px] shadow-left overflow-y-auto overflow-x-hidden flex flex-col">
         <Searchbox initialQuery={query} onSearchChange={handleSearchChange} />
         <Container className="flex flex-col mb-2 pt-4 ml-1 mr-2">
           <h2 className="text-right">لیست کانتینر های نگهداری</h2>
@@ -80,7 +80,7 @@ const AdvancedSearch: React.FC = () => {
         </Container>
       </div>
 
-      <div className="!w-[890px] flex flex-col mt-2">
+      <div className="xlcustom:w-[724px] w-[890px] flex flex-col mt-2">
         <div className="mr-0 pr-0 ml-0 sticky top-0 z-10 bg-white">
           <SearchNavbar />
         </div>
