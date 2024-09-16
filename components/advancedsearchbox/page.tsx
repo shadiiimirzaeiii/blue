@@ -57,38 +57,38 @@ const Searchbox: React.FC<SearchboxProps> = ({
   };
 
   return (
-    <div className="relative w-[516px] h-auto flex flex-col border-2 mt-2 mr-0 rounded-lg shadow-md bg-white">
-      <div className="flex items-center border-b border-gray-200 p-2">
-        <input
-          type="text"
-          placeholder="جستجو کنید.."
-          className="w-full h-[48px] px-4 rounded-md focus:outline-none"
-          value={searchInputValue}
-          onChange={handleSearchInputChange}
-          onBlur={handleSearchInputBlur}
-          onFocus={() => setIsFocused(true)}
-        />
-        <span className="px-2 cursor-pointer">🔍</span>
-      </div>
+    <div className="relative w-[516px] h-auto flex flex-col  mt-2 mr-2 rounded-lg  bg-white">
+      {/* <div className="flex items-center border-b border-gray-200 p-2 h-[56px]"> */}
+      <input
+        type="text"
+        placeholder="جستجو کنید.."
+        className="mt-2 w-full h-[48px] px-4 rounded-md border border-gray-200 bg-searchnavbarbg focus: focus:outline-focusoutline"
+        value={searchInputValue}
+        onChange={handleSearchInputChange}
+        onBlur={handleSearchInputBlur}
+        onFocus={() => setIsFocused(true)}
+      />
+      {/* <span className="px-2 cursor-pointer">🔍</span> */}
+      {/* </div> */}
 
       {isFocused && (
-        <div className="w-full bg-[#f7f9fc] p-2 rounded-b-lg">
-          <div className="flex items-center border border-gray-300 rounded-lg p-2">
-            <input
-              type="text"
-              placeholder="جستجو استان"
-              className="w-full h-[48px] px-4 bg-transparent rounded-lg focus:outline-none"
-              onChange={(e) => setProvinceSearch(e.target.value)}
-              value={provinceSearch}
-            />
-            <span className="px-2 cursor-pointer">📍</span>
-          </div>
-          <ul className="mt-2">
+        <div className="w-[516px] p-0 rounded-b-lg mt-2">
+          {/* <div className="flex items-center border border-seachnavbarborder rounded-lg p-2 h-[56px] bg-searchnavbarbg "> */}
+          <input
+            type="text"
+            placeholder="جستجو استان"
+            className=" ! bg-searchnavbarbg w-full h-[48px] px-4  rounded-lg border border-gray-200 focus:border-focusoutline focus:outline-focusoutline"
+            onChange={(e) => setProvinceSearch(e.target.value)}
+            value={provinceSearch}
+          />
+          {/* <span className="px-2 cursor-pointer">📍</span> */}
+          {/* </div> */}
+          <ul className="mt-2 bg-searchnavbarbg ">
             {filteredOptions.length > 0 ? (
               filteredOptions.map((option, idx) => (
                 <li
                   key={idx}
-                  className="p-2 hover:bg-gray-100 cursor-pointer rounded-md"
+                  className="p-2 hover:bg-dropdownhover cursor-pointer rounded-md"
                   onClick={() => {
                     setProvinceSearch(option);
                     setIsFocused(false);

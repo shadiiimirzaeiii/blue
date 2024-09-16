@@ -61,9 +61,10 @@ const AdvancedSearch: React.FC = () => {
         <Searchbox initialQuery={query} onSearchChange={handleSearchChange} />
         <Container className="flex flex-col mb-2 pt-4 ml-1 mr-2">
           <h2 className="text-right">لیست کانتینر های نگهداری</h2>
-          <h6 className="text-searchtextcolor pt-2 text-right mt-1">
+          <h6 className="text-searchtextcolor pt-1 text-right mt-1">
             با انتخاب دسته بندی مورد نظر خود تجهیز خود را رزرو کنید.
           </h6>
+          <h6 className="pt-4">504 دستگاه مجهز پیدا شد</h6>
         </Container>
         <Container className="flex flex-col mt-0">
           {cards.map((item) => (

@@ -17,13 +17,13 @@ const SearchCard: React.FC<SearchCardProps> = ({
 }) => {
   return (
     <Container className="flex !flex-row mb-2">
-      <Card className="flex !flex-row h-36 w-[476px] ">
+      <Card className="flex !flex-row h-36 w-[476px]  bg-cardsbg border-none rounded-lg">
         <Image
           src={image}
           alt={title}
           width={144}
           height={144}
-          className="w-36 h-36"
+          className="w-36 h-36 rounded-tr-lg rounded-br-lg"
         />
         <Card.Body>
           <Card.Title>

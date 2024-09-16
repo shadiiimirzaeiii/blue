@@ -18,8 +18,13 @@ module.exports = {
         advancedsearchborder: "#F1F5F9",
         searchtextcolor: "#64748B",
         buttonborder: "#F1F5F9",
-        seachnavbarborder: "1px solid #F1F5F9",
-        aboutuscolor: '#575757'
+        seachnavbarborder: "1px solid #94A3B8",
+        searchnavbarbg : '#F8FAFC',
+        aboutuscolor: '#575757',
+        focusoutline : "#4383FE",
+        dropdownbg: "#F5F8FC",
+        dropdownhover: "#E3ECFC",
+        cardsbg : '#FAFAFA',
       },
       height: {
         footerheight: "400px",
