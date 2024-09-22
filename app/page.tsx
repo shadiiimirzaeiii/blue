@@ -47,26 +47,26 @@ export default function Home() {
 
   return (
     <>
-      <Container className="w-full p-0 justify-center mx-auto">
-        <div className="relative">
-          <Image
-            src={landingBanner}
-            alt="banner"
-            // width={1536}
-            // layout="fill"
-            objectFit="cover"
-            className="w-full h-auto filter brightness-50 mx-auto"
-          />
-          <NavBar />
-          <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 font-bold -translate-y-1/2 text-white text-4xl text-center p-2 w-3/5">
-            با انتخاب ما از اجاره تجهیز خود مطمئن شوید!
-          </h1>
-          <h4 className="absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-extralight text-center p-2 w-4/5">
-            بلو لاین آماده ارائه بهترین خدمات در زمینه اجاره تجهیزات صنعتی
-            کارآمد و راحت، به شماست.
-          </h4>
-          <SearchBar />
-        </div>
+      <div className="w-full p-0 justify-center ">
+        {/* <div className="relative"> */}
+         <div className="relative  w-[100vw]  h-screen mr-0">
+  <Image
+    src={landingBanner}
+    alt="banner"
+    layout="fill" // This makes sure the image takes the full width and height of its parent div.
+    objectFit="cover" // Ensures the image covers the entire div without stretching.
+    className="filter brightness-50"
+  />
+  <NavBar />
+  <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 font-bold -translate-y-1/2 text-white text-4xl text-center p-2 w-3/5">
+    با انتخاب ما از اجاره تجهیز خود مطمئن شوید!
+  </h1>
+  <h4 className="absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-extralight text-center p-2 w-4/5">
+    بلو لاین آماده ارائه بهترین خدمات در زمینه اجاره تجهیزات صنعتی کارآمد و راحت، به شماست.
+  </h4>
+  <SearchBar />
+</div>
+        {/* </div> */}
 
         <Container className="xlcustom:mr-12">
           <Container className="w-full xl:w-[1444px] xlcustom:w-[1196px] xlcustom:mr-0 xlcustom:pr-0">
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
         </Container>
         <Footer />
-      </Container>
+      </div>
     </>
   );
 }
