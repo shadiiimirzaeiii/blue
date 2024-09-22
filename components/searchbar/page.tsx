@@ -15,11 +15,11 @@ function SearchBar() {
   };
 
   return (
-    <Row className="absolute top-[57%] left-[11%] w-[1160px] flex flex-row bg-[rgba(182,184,177,0.4)] h-[128px] justify-center p-2 rounded-lg xlcustom:right-[74px] ">
-      <div className="w-[1118px] bg-white rounded-lg p-1 h-[95px] pt-2 pb-1 mt-2">
+    <Row className="absolute top-[57%] left-[11%] w-[1160px] flex flex-row bg-[rgba(182,184,177,0.4)] h-[128px] justify-center p-2 rounded-lg xlcustom:right-[74px] lg:w-[940px] lg:left-[51px] lg:!pl-[16px] lg:!pr-[16px]">
+      <div className="w-[1118px] bg-white rounded-lg p-1 h-[95px] pt-2 pb-1 mt-2 lg:w-[940px]">
         <input
           type="text"
-          className="w-[900px] h-[60px] rounded-lg border-none p-1 text-lg mt-1 box-border outline-none !pr-5 mr-1 "
+          className="w-[900px] h-[60px] rounded-lg border-none p-1 text-lg mt-1 box-border outline-none !pr-5 mr-1 lg:w-[686px]"
           placeholder="شهر رزرو تجهیز خود را جستجو کنید"
           value={query}
           onChange={(e) => setQuery(e.target.value)}

@@ -25,6 +25,7 @@ module.exports = {
         dropdownbg: "#F5F8FC",
         dropdownhover: "#E3ECFC",
         cardsbg : '#FAFAFA',
+        imageslider: '#EF550A'
       },
       height: {
         footerheight: "400px",
@@ -42,14 +43,15 @@ module.exports = {
         fontFamily: {
         regular: 'var(--font-regular)', // Regular font
         bold: 'var(--font-bold)',       // Bold font
+        customsm : '12px'
       },
       radius: {
         navbarradius: '20px, 20px, 0px, 0px'
       },
         screens: {
-    'xlcustom' : {'min': '1280px', 'max' : '1439px'},
+    'xlcustom' : {'min': '1280px', 'max' : '1535px'},
     
-     
+     'lg': {'min': '1024px', 'max' : '1279px'},
         },
     },
   },

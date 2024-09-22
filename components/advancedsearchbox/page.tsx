@@ -58,7 +58,6 @@ const Searchbox: React.FC<SearchboxProps> = ({
 
   return (
     <div className="relative w-[516px] xlcustom:w-[498px] h-auto flex flex-col  mt-2 mr-2 rounded-lg  bg-white">
-      {/* <div className="flex items-center border-b border-gray-200 p-2 h-[56px]"> */}
       <input
         type="text"
         placeholder="جستجو کنید.."
@@ -68,12 +67,9 @@ const Searchbox: React.FC<SearchboxProps> = ({
         onBlur={handleSearchInputBlur}
         onFocus={() => setIsFocused(true)}
       />
-      {/* <span className="px-2 cursor-pointer">🔍</span> */}
-      {/* </div> */}
 
       {isFocused && (
         <div className="w-[516px] xlcustom:w-[498px] p-0 rounded-b-lg mt-2">
-          {/* <div className="flex items-center border border-seachnavbarborder rounded-lg p-2 h-[56px] bg-searchnavbarbg "> */}
           <input
             type="text"
             placeholder="جستجو استان"
@@ -81,8 +77,6 @@ const Searchbox: React.FC<SearchboxProps> = ({
             onChange={(e) => setProvinceSearch(e.target.value)}
             value={provinceSearch}
           />
-          {/* <span className="px-2 cursor-pointer">📍</span> */}
-          {/* </div> */}
           <ul className="mt-2 bg-searchnavbarbg ">
             {filteredOptions.length > 0 ? (
               filteredOptions.map((option, idx) => (

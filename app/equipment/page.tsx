@@ -1,33 +1,97 @@
-// import Navbar from '../../components/navbar/page';
-// import Footer from '../../components/footer/page';
-// import { Container } from 'react-bootstrap';
-// import ImageCarousel from '@/components/imagecarousel/page';
-// import { fetchSampleImages } from '@/services/service';
+// components/equipment/page.tsx
+"use client";
+import { useEffect, useState } from "react";
+import Navbar from "../../components/navbar/page";
+import Footer from "../../components/footer/page";
+import ImageCarousel from "../../components/imagecarousel/page";
+import MapCircle from "../../components/circlemap/page";
+import { fetchSampleImages, fetchContent } from "@/services/Service"; // Import fetchContent
+import { LatLngTuple } from "leaflet";
+import Datepicker from '../../components/datepicker/page'
+const points: LatLngTuple[] = [
+  [37.7749, -122.4194],
+  [37.7749, -122.4184],
+  [37.7739, -122.4184],
+  [37.7739, -122.4194],
+];
 
-// // Import sample images if you want to use static imports
-// import sample1 from '../public/image/sample1.jpg';
-// import sample2 from '../public/image/sample2.jpg';
-// // Import other images similarly...
+export default function Equipment() {
+  const [images, setImages] = useState<any[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  const [content, setContent] = useState<{
+    title: string;
+    description: string;
+    tag: string;
+  } | null>(null);
 
-// export default async function Page() {
-//   const images = await fetchSampleImages(); // Or use static imports directly
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        const fetchedImages = await fetchSampleImages();
+        setImages(fetchedImages);
+      } catch (err) {
+        setError("Failed to load images.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-//   return (
-//     <div className="h-[1683px] w-full min-w-[1444px] !mx-0 p-0 justify-center">
-//       <Navbar />
+    const loadContent = async () => {
+      try {
+        const fetchedContent = await fetchContent();
+        setContent(fetchedContent);
+      } catch (err) {
+        setError("Failed to load content.");
+      }
+    };
 
-//       <Container className="flex flex-row mt-28 justify-center">
-//         {/* col-8 with ImageCarousel */}
-//         <div className="col-8 w-[851px] h-[1092px] border border-red-500">
-//           {/* Pass the fetched images to the ImageCarousel */}
-//           <ImageCarousel images={images} />
-//         </div>
+    loadImages();
+    loadContent();
+  }, []);
 
-//         {/* col-4 for other content */}
-//         <div className="col-4 border border-x-lime-500">col-4</div>
-//       </Container>
+  return (
+    <>
+      <Navbar />
+      <div className="h-[1292px] mt-28 w-full min-w-[1444px] !mx-0 p-0 flex flex-row justify-center">
+        <div className="flex flex-col w-[851px] pr-4">
+          <div className="h-[406px]">
+            {loading ? (
+              <p>درحال بارگذاری...</p>
+            ) : error ? (
+              <p>{error}</p>
+            ) : (
+              <ImageCarousel images={images} />
+            )}
+          </div>
 
-//       <Footer />
-//     </div>
-//   );
-// }
+          <div className="w-[820px] h-[112px] mt-28">
+            {content ? (
+              <>
+              <div className="flex flex-row">
+                <div className="absolute w-[66px] h-[26px]  rounded-full bg-[#E3ECFC] mr-28 text-center pt-1 pb-2 ">
+                  {content.tag}
+                </div>
+                <h2 className="font-bold text-lg">{content.title}</h2>
+                </div>
+                <p className="text-right mt-2">{content.description}</p>
+              </>
+            ) : (
+              <p>در حال بارگذاری محتوا...</p>
+            )}
+          </div>
+
+          <div className="w-[816px] h-[347px] mt-1">
+            <h3 className="font-bold text-lg mb-1">نمایش موقعیت از روی نقشه</h3>
+            <MapCircle points={points} />
+          </div>
+        </div>
+        <div className="w-[345px] h-[576px] col-4 border border-x-lime-500 mr-4">
+          select 
+          <Datepicker/>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+}

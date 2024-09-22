@@ -47,12 +47,14 @@ export default function Home() {
 
   return (
     <>
-      <Container className="w-full mx-0 p-0 justify-center">
+      <Container className="w-full p-0 justify-center mx-auto">
         <div className="relative">
           <Image
             src={landingBanner}
             alt="banner"
-            width={1444}
+            // width={1536}
+            // layout="fill"
+            objectFit="cover"
             className="w-full h-auto filter brightness-50 mx-auto"
           />
           <NavBar />
@@ -80,8 +82,8 @@ export default function Home() {
               بلو لاین به عنوان یک کمپانی با سابقه درخشان، گستره وسیعی از خدمات
               کاربردی و مفید را به مشتریان خود عرضه می کند.
             </h4>
-            <div className="flex flex-col justify-center items-center h-[766px] pr-0 pl-12">
-              <div className="w-full max-w-[1156px]">
+            <div className="flex flex-col justify-center items-center h-[766px] pr-0 pl-12 lg:mr-[23px]">
+              <div className="w-full max-w-[1156px] ">
                 <Row className="mt-0 flex flex-wrap gap-2">
                   {categories.map((category, index) => (
                     <div key={index} className="w-[calc(25%-8px)] mb-1">
@@ -107,7 +109,7 @@ export default function Home() {
               با توجه به نیاز خود وارد داشبورد مورد نظر شوید و از امکانات بلو
               لاین بهره مند شوید.
             </h4>
-            <div className="justify-center row ">
+            <div className="justify-center row lg:mr-[1px] ">
               <SelectWay />
             </div>
           </Row>

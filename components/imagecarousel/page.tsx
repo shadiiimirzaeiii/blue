@@ -1,33 +1,52 @@
-// 'use client';
+// components/imagecarousel/page.tsx
+'use client';
+import { Carousel } from 'react-bootstrap';
+import Image, { StaticImageData } from 'next/image';
+import { useState } from 'react';
 
-// import { Carousel } from 'react-bootstrap';
-// import Image from 'next/image';
+interface ImageCarouselProps {
+  images: StaticImageData[]; // Use StaticImageData for images
+}
 
-// // Import images directly if needed
-// import slider from '../../public/image/slider.png'; // Example import
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
-// interface ImageCarouselProps {
-//   images: string[];
-// }
+  const handleButtonClick = (index: number) => {
+    setActiveIndex(index);
+  };
 
-// const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
-//   return (
-//     <Carousel indicators={false}>
-//       {images.map((image, index) => (
-//         <Carousel.Item key={index}>
-//           <div className="relative w-full h-[500px]">
-//             <Image
-//               src={slider}
-//               alt={`Slide ${index}`}
-//               layout="fill"
-//               objectFit="cover"
-//               className="rounded-lg"
-//             />
-//           </div>
-//         </Carousel.Item>
-//       ))}
-//     </Carousel>
-//   );
-// };
+  return (
+    <div className="relative">
+      <Carousel
+        activeIndex={activeIndex}
+        onSelect={(index) => setActiveIndex(index)}
+        indicators={false}
+      >
+        {images.map((image, index) => (
+          <Carousel.Item key={index}>
+            <div className="relative w-full h-[500px] rounded-lg">
+              <Image
+                src={image}
+                alt={`Slide ${index}`}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+      <div className="absolute bottom-4 inset-x-0 flex justify-center space-x-4">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => handleButtonClick(index)}
+            className={`w-3 h-3 m-2 rounded-full ${activeIndex === index ? 'bg-[#EF550A]' : 'bg-[#EF550A66]'}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-// export default ImageCarousel;
+export default ImageCarousel;

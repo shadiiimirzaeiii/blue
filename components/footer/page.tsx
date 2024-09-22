@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-8 ">
       <div className="container mx-auto flex flex-wrap  items-start px-4 w-[1300px] ">
-        <div className="col-6 w-[580px] mb-6 md:mb-0 text-center md:text-left">
+        <div className="col-6 w-[580px] mb-6 md:mb-0 text-center md:text-left lg:w-[446px]">
           <Image src={Logo} alt="Logo" width={150} height={60} />
-          <p className="mt-4 w-[580px] text-lg text-right leading-10">
+          <p className="mt-4 w-[580px] text-lg text-right leading-10 lg:text-[15px] lg:w-[504px] ">
             ما یک تیم متخصص و پویا هستیم که به ارائه خدمات اجاره تجهیزات با
             کیفیت و قابل اعتماد، متعهد می باشیم. از مزایای اجاره تجهیزات از ما،
             ارائه قیمت‌های رقابتی و شفاف است.

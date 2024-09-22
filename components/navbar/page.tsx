@@ -20,7 +20,7 @@ function NavbarComponent() {
             <Image src={Logo} alt="Logo" width={180} height={35} />
           </Navbar.Brand>
 
-          <div className="flex-1 flex gap-2 ">
+          <div className="flex-1 flex gap-2 lg:text-[12px]">
             <Nav.Link href="#home" className="px-2 py-2 mr-6">
               دسته بندی ها
             </Nav.Link>
