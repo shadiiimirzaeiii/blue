@@ -47,24 +47,25 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full p-0 justify-center ">
-         <div className="relative  w-[100vw]  h-screen mr-0">
-  <Image
-    src={landingBanner}
-    alt="banner"
-    layout="fill" 
-    objectFit="cover" 
-    className="filter brightness-50"
-  />
-  <NavBar />
-  <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 font-bold -translate-y-1/2 text-white text-4xl text-center p-2 w-3/5">
-    با انتخاب ما از اجاره تجهیز خود مطمئن شوید!
-  </h1>
-  <h4 className="absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-extralight text-center p-2 w-4/5">
-    بلو لاین آماده ارائه بهترین خدمات در زمینه اجاره تجهیزات صنعتی کارآمد و راحت، به شماست.
-  </h4>
-  <SearchBar />
-</div>
+      <div className="w-full p-0 justify-center pr-[10%]">
+        <div className="relative  w-[100vw]  h-screen mr-0">
+          <Image
+            src={landingBanner}
+            alt="banner"
+            layout="fill"
+            objectFit="cover"
+            className="filter brightness-50"
+          />
+          <NavBar />
+          <h1 className="absolute top-[40%] left-1/2 transform -translate-x-1/2 font-bold -translate-y-1/2 text-white text-4xl text-center p-2 w-3/5 ">
+            با انتخاب ما از اجاره تجهیز خود مطمئن شوید!
+          </h1>
+          <h4 className="absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-extralight text-center p-2 w-4/5">
+            بلو لاین آماده ارائه بهترین خدمات در زمینه اجاره تجهیزات صنعتی
+            کارآمد و راحت، به شماست.
+          </h4>
+          <SearchBar />
+        </div>
 
         <Container className="xlcustom:mr-12">
           <Container className="w-full xl:w-[1444px] xlcustom:w-[1196px] xlcustom:mr-0 xlcustom:pr-0">
@@ -80,7 +81,7 @@ export default function Home() {
               بلو لاین به عنوان یک کمپانی با سابقه درخشان، گستره وسیعی از خدمات
               کاربردی و مفید را به مشتریان خود عرضه می کند.
             </h4>
-            <div className="flex flex-col justify-center items-center h-[766px] pr-0 pl-12 lg:mr-[23px]">
+            <div className="flex mx-auto w-full flex-col justify-center items-center h-[766px] pr-0 pl-12 ">
               <div className="w-full max-w-[1156px] ">
                 <Row className="mt-0 flex flex-wrap gap-2">
                   {categories.map((category, index) => (
