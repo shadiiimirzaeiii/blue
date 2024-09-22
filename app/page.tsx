@@ -48,13 +48,12 @@ export default function Home() {
   return (
     <>
       <div className="w-full p-0 justify-center ">
-        {/* <div className="relative"> */}
          <div className="relative  w-[100vw]  h-screen mr-0">
   <Image
     src={landingBanner}
     alt="banner"
-    layout="fill" // This makes sure the image takes the full width and height of its parent div.
-    objectFit="cover" // Ensures the image covers the entire div without stretching.
+    layout="fill" 
+    objectFit="cover" 
     className="filter brightness-50"
   />
   <NavBar />
@@ -66,7 +65,6 @@ export default function Home() {
   </h4>
   <SearchBar />
 </div>
-        {/* </div> */}
 
         <Container className="xlcustom:mr-12">
           <Container className="w-full xl:w-[1444px] xlcustom:w-[1196px] xlcustom:mr-0 xlcustom:pr-0">
